@@ -1,0 +1,12 @@
+{% extends 'layout/base.html' %} {% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/home.css') }}" />
+{% endblock %} {% block title %} Home Page {% endblock %} {% block content %}
+<h1>Home Page</h1>
+<p>This is the Home Page</p>
+<button id="btn">Home Button</button>
+
+    {% block extra_js %} 
+        
+    {% endblock %}
+
+{% endblock %}

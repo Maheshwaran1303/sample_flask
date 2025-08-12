@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Base Title | My Project {% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    {% block extra_css %} {% endblock %}
+  </head>
+  <body>
+    {% include 'include/navbar.html' %} {% block content %} {% endblock %}
+
+    <button id="btn">Click Me</button>
+
+    {% include 'include/footer.html' %}
+
+    <script src="{{ url_for('static', filename = 'js/script.js') }}"></script>
+
+    {% block extra_js %} 
+    {% endblock %}
+  </body>
+</html>
